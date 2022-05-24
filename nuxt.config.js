@@ -6,19 +6,23 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - for_queen',
-    title: 'for_queen',
+    // titleTemplate: '%s - for_queen',
+    title: 'ลงนามถวายพระพรออนไลน์ เนื่องในวันเฉลิมพระชนมพรรษา วันที่ 3 มิถุนายน 2565 |  กรมบัญชีกลาง',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'ลงนามถวายพระพรออนไลน์ เนื่องในวันฉัตรมงคล วันที่ 4 พฤษภาคม 2565 | กรมบัญชีกลาง' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700&display=swap'
+      },
     ]
   },
 
@@ -41,7 +45,14 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios',
   ],
+
+  axios:{
+    baseURL: 'https://forking.cgd.go.th/', // Used as fallback if no runtime config is provided
+    // baseURL: 'http://10.100.90.24', // run dev
+    // proxy: false
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
