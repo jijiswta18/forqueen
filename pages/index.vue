@@ -215,19 +215,19 @@ export default {
   .style-title{
     font-weight: 400;
     margin: 2rem 0 1rem 0;
-    color: #5f4303;
+    color: white;
   }
   .style-xs{
     display: none;
   }
   .style-name{
-   margin: 2rem 0 1rem 0;
+   margin: 1rem 0 1rem 0;
    font-weight: 400;
-   color: #5f4303;
+   color: white;
   }
 
   .style-number{
-    color: #5f4303;
+    color: #e7c576;
     font-size: 20px;
   }
   
@@ -257,16 +257,24 @@ export default {
   }
 
   ::v-deep .theme--light.v-input {
-    color: white;
+    color: #e7c576;
   }
+
+  
+  ::v-deep .theme--light.v-input:hover {
+    color: #e7c576!important;
+  }
+
+  
+
   ::v-deep .theme--light.v-label {
-    color: white;
+    color: #e7c576;
   }
   ::v-deep .theme--light.v-input input{
       color: white;
   }
   ::v-deep .theme--light.v-text-field > .v-input__control > .v-input__slot:before {
-    border-color: white;
+    border-color: #e7c576;
   }
 
   @media only screen and (max-width: 600px) {
@@ -287,7 +295,7 @@ export default {
     }
     .style-xs{
       display: block;
-      color: #5f4303;
+      color: white;
       margin: 2rem 0 1rem 0;
     }
     .style-xs h2{
