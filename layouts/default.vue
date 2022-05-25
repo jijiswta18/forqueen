@@ -65,7 +65,7 @@ export default {
   }
   html{
     height: 100%;
-    overflow-y: none!important;
+    overflow-y: auto!important;
   }
   body{
     font-family: 'Kanit', sans-serif;
