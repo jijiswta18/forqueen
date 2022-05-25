@@ -38,7 +38,7 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style>
   .full-page{
     height: auto;
     min-height: 100vh;
@@ -50,15 +50,22 @@ export default {
     text-align: center;
     height: auto;
     min-height: 100vh;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .container{
+    padding: 0; 
+  }
   html{
-   height: 100%;
+    overflow-y: auto;
+  }
+  html{
+    height: 100%;
+    overflow-y: none!important;
   }
   body{
     font-family: 'Kanit', sans-serif;

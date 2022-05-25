@@ -1,72 +1,75 @@
 <template>
-  <div class="page">
-    <div class="image">
-      <div class="second-image">
-        <img class="w-100" src="~/assets/images/bgqueen.jpg" />
-        <div v-if="!checkForm" @click="signForm">
-          <img class="box-sign" src="~/assets/images/banner01.gif"/>
+  <div class="index-page">
+    <div class="page">
+      <div class="image">
+        <div class="second-image">
+          <img class="w-100" src="~/assets/images/bgqueen.jpg" />
+          <div v-if="!checkForm" @click="signForm">
+            <img class="box-sign" src="~/assets/images/banner01.gif"/>
+          </div>
         </div>
+      
       </div>
-    
-    </div>
-    <v-form 
-      ref="form" 
-      lazy-validation 
-      v-if="checkForm && !checkSubmit"  
-      v-model="valid"
-      class="sign-form"
-    >
-        <v-text-field
-          v-model="p_name"
-          :rules="nameRules"
-          label="ชื่อ"
-          required
-          thai_engLanguage
-          maxlength="30"
-        ></v-text-field>
-
+      <v-form 
+        ref="form" 
+        lazy-validation 
+        v-if="checkForm && !checkSubmit"  
+        v-model="valid"
+        class="sign-form"
+      >
           <v-text-field
-          v-model="p_lastname"
-          :rules="lastnameRules"
-          label="นามสกุล"
-          required
-          thai_engLanguage
-          maxlength="30"
-        ></v-text-field>
-    
-      <div class="btn-submit">
-        <img src="~/assets/images/banner01.gif"  @click="submit"/>
-      </div>
-    </v-form>
-    <div v-if="checkSubmit" class="box-detail">
-      <h2 class="style-title">ด้วยเกล้าด้วยกระหม่อมขอเดชะ ข้าพระพุทธเจ้า</h2> 
-      <div class="style-xs">
-        <h2>ด้วยเกล้าด้วยกระหม่อมขอเดชะ</h2> 
-        <h2>ข้าพระพุทธเจ้า</h2> 
-      </div>
-      <h3 class="style-name">{{item.name}} {{item.lastname}}</h3> 
-      <p class="style-number">ผู้ร่วมลงนามลำดับที่ : {{item.counter}}</p>
-      <div class="box-footer">
-          <a href="https://www.cgd.go.th/">
+            v-model="p_name"
+            :rules="nameRules"
+            label="ชื่อ"
+            required
+            thai_engLanguage
+            maxlength="30"
+          ></v-text-field>
+
+            <v-text-field
+            v-model="p_lastname"
+            :rules="lastnameRules"
+            label="นามสกุล"
+            required
+            thai_engLanguage
+            maxlength="30"
+          ></v-text-field>
+      
+        <div class="btn-submit">
+          <img src="~/assets/images/banner01.gif"  @click="submit"/>
+        </div>
+      </v-form>
+      <div v-if="checkSubmit" class="box-detail">
+        <h2 class="style-title">ด้วยเกล้าด้วยกระหม่อมขอเดชะ ข้าพระพุทธเจ้า</h2> 
+        <div class="style-xs">
+          <h2>ด้วยเกล้าด้วยกระหม่อมขอเดชะ</h2> 
+          <h2>ข้าพระพุทธเจ้า</h2> 
+        </div>
+        <h3 class="style-name">{{item.name}} {{item.lastname}}</h3> 
+        <p class="style-number">ผู้ร่วมลงนามลำดับที่ : {{item.counter}}</p>
+        <div class="box-footer">
+            <a href="https://www.cgd.go.th/">
+              <v-btn
+                rounded
+                large
+                class="btn btn-home"
+                >
+                กลับหน้าหลัก
+              </v-btn>
+            </a>
             <v-btn
               rounded
-               large
-              class="btn btn-home"
-              >
-              กลับหน้าหลัก
-            </v-btn>
-          </a>
-          <v-btn
-            rounded
-             large
-            class="btn btn-print"
-            @click="printDivContent"
-          >
-          พิมพ์คำถวายพระพร
-        </v-btn>    
+              large
+              class="btn btn-print"
+              @click="printDivContent"
+            >
+            พิมพ์คำถวายพระพร
+          </v-btn>    
+        </div>
       </div>
-    </div>
-  </div> 
+    </div> 
+  </div>
+ 
 </template>
 
 <script>
@@ -167,6 +170,14 @@ export default {
 }
 </script>
 <style scoped>
+  .index-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    min-height: 100vh;
+    padding: 12px;
+  }
   .page{
     text-align: center;
   }
