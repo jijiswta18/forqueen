@@ -58,7 +58,7 @@ export default {
     background-size: cover;
   }
   .container{
-    padding: 0; 
+    padding: 0!important; 
   }
   html{
     overflow-y: auto;
