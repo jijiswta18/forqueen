@@ -46,7 +46,7 @@ export default {
   }
   .bg-page{
     /* background-color: #a38bc2; */
-    background-image: url("~/assets/images/bg2.jpeg");
+    background-image: url("~/assets/images/bg2.jpg");
     text-align: center;
     height: auto;
     min-height: 100vh;

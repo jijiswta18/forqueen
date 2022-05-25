@@ -201,14 +201,14 @@ export default {
   }
    .btn-home{
     background-color: #7c4b0b!important;
-    color: white;
+    color: white!important;
     margin-right: 0.5rem;
     font-weight: 300;
   }
    .btn-print{
     background-color: white!important;
     border: 1px solid #7c4b0b!important;
-    color: #7c4b0b;
+    color: #7c4b0b!important;
     font-weight: 400;
    
   }
