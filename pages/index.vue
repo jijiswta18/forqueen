@@ -90,7 +90,7 @@ export default {
       // v => (v && v.length <= 30) || 'ห้ามกรอกเกิน 30 ตัวอักษร',
       v =>/^[a-zA-Zก-ฮะ-์\s]+$/.test(v) ||` ห้ามกรอกอักขระพิเศษ เเละตัวเลข`
     ],
-    p_festival: 'forking',
+    p_festival: 'forqueen',
     regis_date: moment().format('YYYY-MM-DD HH:mm:ss'),
     browser: '',
     device: '',
