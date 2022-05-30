@@ -14,7 +14,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'ลงนามถวายพระพรออนไลน์ เนื่องในวันฉัตรมงคล วันที่ 4 พฤษภาคม 2565 | กรมบัญชีกลาง' },
+      { hid: 'description', name: 'description', content: 'ลงนามถวายพระพรออนไลน์ เนื่องในวันเฉลิมพระชนมพรรษา วันที่ 3 มิถุนายน 2565 | กรมบัญชีกลาง' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
