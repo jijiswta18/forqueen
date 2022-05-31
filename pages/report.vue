@@ -1,5 +1,17 @@
 <template>
     <div class="report-page pa-2">
+     <v-btn
+        class="ma-2 backhome"
+        color="orange darken-2"
+        @click="backHome"
+      >
+        <v-icon
+          dark
+          left
+        >
+          mdi-arrow-left
+        </v-icon>Back
+      </v-btn>
         <div id="app" data-app>
             <v-card>
                 <v-card-title>
@@ -63,6 +75,9 @@
                 })
             })
         },
+        backHome(){
+          this.$router.go(-1)
+        }
     }
   }
 </script>
@@ -70,4 +85,12 @@
     .report-page{
         padding: 12px;
     }
+  .backhome{
+      text-align: right;
+      display: block;
+      margin-bottom: 1rem;
+      background-color: #f57c00!important;
+      border-color: #f57c00!important;
+      color: white;
+  }
 </style>
