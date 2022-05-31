@@ -12,6 +12,15 @@
           mdi-arrow-left
         </v-icon>Back
       </v-btn>
+        <downloadexcel
+          class="btn btn-default"
+          :data="desserts"
+          :fields="json_fields"
+          worksheet="My Worksheet"
+          name="forqueen.xls"
+        >
+        Download Excel
+      </downloadexcel>
         <div id="app" data-app>
             <v-card>
                 <v-card-title>
@@ -37,7 +46,11 @@
 </template>
 <script>
   import moment from 'moment'
+  import downloadexcel from "vue-json-excel";
   export default {
+    components: {
+    downloadexcel,
+  },
     data () {
       return {
         loader: null,
@@ -56,6 +69,30 @@
           { text: 'วันที่ลงนาม', value: 'regis_date' },
         ],
         desserts: [],
+        json_fields: {
+          "ลำดับ": "number",
+          "ชื่อ-สกุล" : "name",
+          "Browser" : "browser",
+          "Device" : "device",
+          "วันที่ลงนาม" : "regis_date"
+        },
+        // json_data: [
+        //   {
+        //     number : this.desserts,
+        //     name: "Tony Peña",
+        //     browser: "New York",
+        //     device: "United States",
+        //     regis_date: "1978-03-15",
+        //   },
+        // ],
+         json_meta: [
+          [
+            {
+              key: "charset",
+              value: "utf-8",
+            },
+          ],
+        ],
       }
     },
     created(){
@@ -77,7 +114,8 @@
         },
         backHome(){
           this.$router.go(-1)
-        }
+        },
+
     }
   }
 </script>
