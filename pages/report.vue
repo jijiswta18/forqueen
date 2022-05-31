@@ -1,26 +1,35 @@
 <template>
     <div class="report-page pa-2">
-     <v-btn
-        class="ma-2 backhome"
-        color="orange darken-2"
-        @click="backHome"
+      <div class="box-btn">
+          <v-btn
+          class="ma-2 backhome"
+          color="orange darken-2"
+          @click="backHome"
+        >
+          <v-icon
+            dark
+            left
+          >
+            mdi-arrow-left
+          </v-icon>Back
+        </v-btn>
+
+      <v-btn
+        color="blue-grey"
+        class="btn-export"
       >
-        <v-icon
-          dark
-          left
-        >
-          mdi-arrow-left
-        </v-icon>Back
-      </v-btn>
         <downloadexcel
-          class="btn btn-default"
-          :data="desserts"
-          :fields="json_fields"
-          worksheet="My Worksheet"
-          name="forqueen.xls"
-        >
-        Download Excel
-      </downloadexcel>
+            class="btn btn-default"
+            :data="desserts"
+            :fields="json_fields"
+            worksheet="My Worksheet"
+            name="forqueen.xls"
+          >
+          Export Excel
+        </downloadexcel>
+      </v-btn>
+      </div>
+
         <div id="app" data-app>
             <v-card>
                 <v-card-title>
@@ -120,15 +129,20 @@
   }
 </script>
 <style scoped>
-    .report-page{
-        padding: 12px;
-    }
+  .report-page{
+      padding: 12px;
+  }
   .backhome{
-      text-align: right;
-      display: block;
-      margin-bottom: 1rem;
-      background-color: #f57c00!important;
-      border-color: #f57c00!important;
-      color: white!important;
+    background-color: #f57c00!important;
+    border-color: #f57c00!important;
+    color: white!important;
+  }
+  .btn-export{
+    border: 1px solid #f57c00!important;
+     color: #f57c00!important;
+  }
+  .box-btn{
+    text-align: right;
+    margin-bottom: 1rem;
   }
 </style>
