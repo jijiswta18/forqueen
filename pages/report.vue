@@ -27,7 +27,7 @@
                     :headers="headers"
                     :items="desserts"
                     :items-per-page="12"
-                    :footer-props="{'items-per-page-options':[12, 30, 50, 100, -1]}"
+                    :footer-props="{'items-per-page-options':[10, 30, 50, 100, -1]}"
                     :search="search"
                     class="elevation-1"
                 ></v-data-table>
@@ -91,6 +91,6 @@
       margin-bottom: 1rem;
       background-color: #f57c00!important;
       border-color: #f57c00!important;
-      color: white;
+      color: white!important;
   }
 </style>
