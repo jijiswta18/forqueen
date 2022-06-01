@@ -4,16 +4,16 @@
       <div class="image">
         <div class="second-image">
           <img class="w-100" src="~/assets/images/bgqueen.jpg" />
-          <div v-if="!checkForm" @click="signForm">
+          <!-- <div v-if="!checkForm" @click="signForm">
             <img class="box-sign" src="~/assets/images/banner01.gif"/>
-          </div>
+          </div> -->
         </div>
       
       </div>
       <v-form 
         ref="form" 
         lazy-validation 
-        v-if="checkForm && !checkSubmit"  
+        v-if="!checkSubmit"  
         v-model="valid"
         class="sign-form"
       >

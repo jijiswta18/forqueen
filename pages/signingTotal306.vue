@@ -11,7 +11,7 @@
             left
           >
             mdi-arrow-left
-          </v-icon>Back
+          </v-icon>ลงนามถวายพระพร
         </v-btn>
 
       <v-btn
@@ -22,7 +22,7 @@
             class="btn btn-default"
             :data="desserts"
             :fields="json_fields"
-            worksheet="My Worksheet"
+            worksheet="My forqueen"
             name="forqueen.xls"
           >
           Export Excel
@@ -122,7 +122,7 @@
             })
         },
         backHome(){
-          this.$router.go(-1)
+          this.$router.push('/')
         },
 
     }
