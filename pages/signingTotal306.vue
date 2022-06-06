@@ -110,7 +110,7 @@
    
     methods:{
         getDetail: async function(){
-            const response = await this.$axios.get('/api/export_forking')  
+            const response = await this.$axios.get('/api/export_ffuagvylst')  
             response.data.data.forEach(item => {
                 this.desserts.push({ 
                     'number'    : item.id,
