@@ -23,7 +23,7 @@
             :data="desserts"
             :fields="json_fields"
             worksheet="My forqueen"
-            name="forqueen.xlsx"
+            name="forqueen.xls"
           >
           Export Excel
         </downloadexcel>
