@@ -20,7 +20,7 @@
       >
         <vue-excel-xlsx
             class="btn btn-default"
-            :data="data"
+            :data="desserts"
             :columns="columns"
             :file-name="'forqueen'"
             :file-type="'xlsx'"
