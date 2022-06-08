@@ -18,15 +18,16 @@
         color="blue-grey"
         class="btn-export"
       >
-        <downloadexcel
+        <vue-excel-xlsx
             class="btn btn-default"
-            :data="desserts"
-            :fields="json_fields"
-            worksheet="My forqueen"
-            name="forqueen"
-          >
-          Export Excel
-        </downloadexcel>
+            :data="data"
+            :columns="columns"
+            :file-name="'forqueen'"
+            :file-type="'xlsx'"
+            :sheet-name="'forqueen'"
+            >
+            Export Excel
+        </vue-excel-xlsx>
       </v-btn>
       </div>
 
@@ -55,10 +56,8 @@
 </template>
 <script>
   import moment from 'moment'
-  import downloadexcel from "vue-json-excel";
   export default {
     components: {
-    downloadexcel,
   },
     data () {
       return {
@@ -78,29 +77,27 @@
           { text: 'วันที่ลงนาม', value: 'regis_date' },
         ],
         desserts: [],
-        json_fields: {
-          "ลำดับ": "number",
-          "ชื่อ-สกุล" : "name",
-          "Browser" : "browser",
-          "Device" : "device",
-          "วันที่ลงนาม" : "regis_date"
-        },
-        // json_data: [
-        //   {
-        //     number : this.desserts,
-        //     name: "Tony Peña",
-        //     browser: "New York",
-        //     device: "United States",
-        //     regis_date: "1978-03-15",
-        //   },
-        // ],
-         json_meta: [
-          [
+        columns : [
             {
-              key: "charset",
-              value: "utf-8",
+                label: "ลำดับ",
+                field: "number",
             },
-          ],
+            {
+                label: "ชื่อ-สกุล",
+                field: "name",
+            },
+            {
+                label: "Browser",
+                field: "browser",
+            },
+            {
+                label: "Device",
+                field: "device",
+            },
+            {
+                label: "วันที่ลงนาม",
+                field: "regis_date",
+            }
         ],
       }
     },
